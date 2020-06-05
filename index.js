@@ -41,7 +41,7 @@ $( "#fullpage" ).fullpage( {
     $(".time-slider").ionRangeSlider({
       skin: "round",
       type: "double",
-      from: 33,
+      from: 35,
       to: 44,
       min: 0,
       max: 100,
