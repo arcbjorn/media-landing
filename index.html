@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+  <link rel='stylesheet' type="text/css" href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css'>
+  <link rel='stylesheet' type="text/css" href='styles.css'>
+</head>
+<body>
+  <header>
+    <div class="sidebar">
+      <a class="toggle-menu" href="#">
+        <i></i>
+        <i></i>
+        <i></i>
+      </a>
+    </div>
+  
+    <nav class="hide">
+      <div class="menu-container">
+        <ul id="menu">
+          <li data-menuanchor="home">
+            <a href="#home" title="Home">Главная</a>
+          </li>
+          <li data-menuanchor="contact">
+            <a href="#contact" title="Contact">Подбор блюд</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div id="fullpage">
+    <section class="vertical-scrolling" id="parallax">
+      <img id="grains" src="images/Grains.svg"></img>
+      <img id="logo-header" src="images/LogoBlack.svg"></img>
+      <h1 id="main-title">Как понять, что греча твое все?</h1>
+      <p id="main-desc">Укажи, чего ты хочешь<br />и получи подборку блюд из гречи</з>
+      <div class="scroll-icon">
+        <a href="#contact">
+          <p id="scroll-link">Начать!</p>
+          <img id="scroll-arrow" src="https://img.icons8.com/material-sharp/24/000000/down.png"/>
+        </a>
+        </div>
+      <img id="main-pic" style="height: 71vh; width: 57vw;" src="images/Food.svg"></img>
+    </section>
+    <section class="vertical-scrolling">
+      <h2 id="contact-title">Твоя греча</h2>
+      <p id="contact-desc">Укажи, чего ты хочешь<br />и получи подборку блюд из гречи</p>
+      <div id="contact-form-wrapper">
+        <img id="contact-form-bg-img" src="images/Buckwheat_bg.svg"></img>
+        <form id="contact-form" onsubmit="submitInfo">
+          <div class="slider-container">
+            <label for="like">Насколько ты любишь гречку?</label><br>
+            <input type="text" class="preference-slider" name="like" value="" />
+          </div>
+          <div class="slider-container">
+            <label for="time">Время на приготовление</label><br>
+            <input type="text" class="time-slider" name="time" value="" />
+          </div>
+          <div id="meal">
+            <div class="radio-container">
+              <div name="breakfast" class="radio radio--clicked">
+                <div class="radio--value"></div>
+              </div>
+              <label for="breakfast">Завтрак</label>
+              <div name="lunch" class="radio">
+                <div class="radio--value"></div>
+              </div>
+              <label for="lunch">Обед</label>
+              <div name="dinner" class="radio radio--clicked">
+                <div class="radio--value"></div>
+              </div>
+              <label for="dinner">Ужин</label>
+              <div name="nightsnack" class="radio">
+                <div class="radio--value"></div>
+              </div>
+              <label for="nightsnack">Ночной дожор</label>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div class="name">
+              <label for="name">Имя</label><br>
+              <input type="text" id="name" name="name">
+            </div>
+            <div class="phone">
+              <label for="phone">Телефон</label><br>
+              <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-____">
+            </div>
+          </div>
+          <input class="submit-btn" type="submit" value="Получить по гречке">
+        </form>
+      </div>
+      <footer>
+        <img id="logo-footer" src="images/LogoWhite.svg"></img>
+      </footer>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
